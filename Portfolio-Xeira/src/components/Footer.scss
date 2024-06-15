@@ -1,0 +1,8 @@
+footer {
+	height: 4rem;
+	border-top: 2px solid var(--text-color);
+	border-radius: 1rem 1rem 0 0;
+	display: grid;
+	place-items: center;
+	box-shadow: 0 0 15px var(--black-color);
+}

@@ -1,0 +1,39 @@
+@media (prefers-color-scheme: light) {
+	:root {
+		--primary-color: rgb(70, 26, 156);
+		--primary-color-light: rgb(125, 6, 220);
+		--primary-color-dark: rgb(45, 3, 97);
+		--secondary-color: rgb(19, 19, 19);
+		--secondary-color-light: rgb(19, 19, 19);
+		--secondary-color-dark: rgb(19, 19, 19);
+		--text-color: rgb(26, 26, 26);
+		--body-bg-color: rgb(220, 220, 220);
+		--body-color: rgb(19, 19, 19);
+		--black-color: rgb(0, 0, 0);
+	}
+}
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-color: rgb(70, 26, 156);
+		--primary-color-light: rgb(125, 6, 220);
+		--primary-color-dark: rgb(45, 3, 97);
+		--secondary-color: rgb(198, 191, 231);
+		--secondary-color-light: rgb(215, 216, 244);
+		--secondary-color-dark: rgb(184, 177, 225);
+		--text-color: ghostwhite;
+		--body-bg-color: rgb(26, 26, 26);
+		--body-color: rgb(220, 220, 220);
+		--black-color: rgb(0, 0, 0);
+	}
+}
+
+/* fonts */
+$h1-font-size: 2.027rem;
+$h2-font-size: 1.802rem;
+$h3-font-size: 1.602rem;
+$h4-font-size: 1.424rem;
+$normal-font-size: 1rem;
+$small-font-size: 0.889rem;

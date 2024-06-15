@@ -1,0 +1,194 @@
+.about {
+	padding-top: 4.8125rem;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	.container {
+		h2 {
+			text-align: center;
+		}
+		.timeline {
+			margin-top: 4rem;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: auto;
+			height: 760px;
+			ul {
+				grid-column: span 2;
+				gap: 2rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+
+				li {
+					display: flex;
+					justify-content: flex-start;
+					align-items: flex-start;
+					gap: 1.5rem;
+					position: relative;
+					width: 100%;
+					height: calc(20% - 2rem);
+					opacity: 0.7;
+					transition: all 0.5s ease-in-out;
+
+					p {
+						display: flex;
+						place-items: center;
+						width: 100%;
+						height: 100%;
+						padding: 1rem;
+						border: 3px solid var(--text-color);
+						border-radius: 5px 15px 15px;
+						background-color: var(--body-bg-color);
+						padding: 0.5rem;
+						text-wrap: wrap;
+						cursor: default;
+					}
+					&.active {
+						transform: translateX(10px);
+						opacity: 1;
+						p {
+							/* color: var(--body-bg-color);
+							background-color: var(--text-color); */
+							border-color: var(--primary-color-light);
+						}
+					}
+				}
+			}
+
+			&_images {
+				grid-column: span 2;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 3rem;
+
+				.card {
+					background: radial-gradient(var(--primary-color-light) 20%, var(--body-bg-color) 70%);
+					position: relative;
+					width: 60px;
+					height: 60px;
+					padding: 10px 13px;
+					border-radius: 50%;
+					transition: width 0.5s ease-out, height 0.5s ease-out, padding 0.5s ease-out;
+
+					.frame {
+						background-color: ghostwhite;
+						width: 100%;
+						height: 100%;
+						padding: 3px;
+						border-radius: 3px;
+						position: relative;
+
+						transition: padding 0.5s ease-out, border-radius 0.5s ease-out, transform 0.6s ease-in-out;
+
+						&::after {
+							content: '';
+							position: absolute;
+							top: 3px;
+							left: 3px;
+							right: 3px;
+							height: 60%;
+							border-radius: 1px;
+							background-color: #000000;
+							z-index: 10;
+							transition: all 0.5s ease-out, opacity 0.5s ease-out 0.2s;
+						}
+						img {
+							object-fit: cover;
+							object-position: top;
+							width: 100%;
+							height: 70%;
+							transition: all 0.5s ease-out;
+							padding: 1px;
+						}
+
+						span {
+							font-size: 1.2rem;
+							font-weight: bold;
+							text-align: center;
+							position: absolute;
+							bottom: 0;
+							left: 50%;
+							transform: translateX(-50%) translateY(-20%);
+							color: #111111;
+							padding: 3px 7px;
+							border: 2px solid #111111;
+							border-radius: 5px;
+							opacity: 0;
+							transition: opacity 0.1s ease-out;
+						}
+					}
+
+					&::before {
+						content: '';
+						position: absolute;
+						bottom: calc(100% + 0.5rem);
+						left: 50%;
+						transform: translateX(-50%);
+						width: 5px;
+						height: 2rem;
+						background-color: var(--text-color);
+						opacity: 0.7;
+						border-radius: 2px;
+					}
+
+					&.active {
+						/* animation: 0.5s ease-out forwards; */
+						width: 325px;
+						height: 325px;
+						padding: 25px 30px;
+
+						.frame {
+							/* animation: 0.5s ease-out forwards; */
+							padding: 1rem;
+							border-radius: 10px;
+							box-shadow: inset 0 0 10px 0 #000000;
+							transition: transform 0.6s ease-in-out 0.2s;
+
+							@media (prefers-color-scheme: light) {
+								box-shadow: 0 0 10px 0 #000000;
+							}
+
+							&::after {
+								top: 1rem;
+								left: 1rem;
+								right: 1rem;
+								height: 70%;
+								border-radius: 10px;
+								opacity: 0;
+								transition: all 0.5s ease-out, height 0.5s ease-out 0.2s;
+							}
+
+							img {
+								border-radius: 10px;
+								height: 80%;
+								transition: all 0.5s ease-out, height 0.5s ease-out 0.2s;
+								box-shadow: 0 0 10px 0 #000000;
+							}
+
+							span {
+								opacity: 1;
+								transition: opacity 0.15s ease-out 0.35s;
+							}
+						}
+						&:nth-child(even) {
+							.frame {
+								transform: rotate(2deg);
+							}
+						}
+
+						&:nth-child(odd) {
+							.frame {
+								transform: rotate(-2deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

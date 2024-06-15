@@ -1,0 +1,16 @@
+[
+	{
+		"name": "Luvv7",
+		"tecnologies": ["React", "Vite", "Sass", "Supabase"],
+		"description": "This was my first React project. I made it for a friend, it's a blog where he can write, edit and delete posts from a database. Also anyone can create an account and customize their profile. Supabase is used for the database. I learned a lot with this project.",
+		"image": "/Luvv7.png",
+		"link": "https://luvv7.site"
+	},
+	{
+		"name": "Media Dash",
+		"tecnologies": ["React", "Vite", "Nivo", "Material UI"],
+		"description": "A React dashboard for all your company needs. Built with Material UI and Nivo charts.",
+		"image": "/Media Dash.png",
+		"link": "https://media-dash.tiiny.site/"
+	}
+]

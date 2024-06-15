@@ -1,0 +1,93 @@
+@use '../abstracts/animations' as *;
+
+.hero {
+	.container {
+		height: calc(100vh - 6.8125rem);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+	}
+
+	&_pic {
+		height: 300px;
+		width: 300px;
+		object-fit: cover;
+		border-radius: 150px 150px 10px 150px;
+		border: 2px solid var(--text-color);
+		background: radial-gradient(circle at 50% 97%, var(--primary-color) 5%, var(--body-bg-color) 80%);
+	}
+
+	&_text {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		h2 {
+			opacity: 0;
+			animation: fadeIn 0.7s forwards;
+		}
+
+		p {
+			opacity: 0;
+			animation: fadeIn 0.7s 0.5s forwards;
+			margin-bottom: 2rem;
+		}
+
+		span {
+			margin-bottom: 0.5rem;
+			opacity: 0;
+			animation: fadeIn 0.3s 0.8s forwards;
+		}
+
+		.icons {
+			display: flex;
+			gap: 1rem;
+			.remixicon {
+				opacity: 0;
+				animation: fadeIn 0.7s forwards, hoverDown 0.2s forwards;
+				transition: color 0.2s linear;
+
+				&:nth-child(1) {
+					animation-delay: 1s, 0s;
+					&:hover {
+						color: #dd7e02;
+					}
+				}
+
+				&:nth-child(2) {
+					animation-delay: 1.3s, 0s;
+					&:hover {
+						color: #217ae0;
+					}
+				}
+
+				&:nth-child(3) {
+					animation-delay: 1.6s, 0s;
+					&:hover {
+						color: #b39a0e;
+					}
+				}
+
+				&:nth-child(4) {
+					animation-delay: 1.9s, 0s;
+					&:hover {
+						color: #20e7f5;
+					}
+				}
+
+				&:nth-child(5) {
+					animation-delay: 2.2s, 0s;
+				}
+
+				&:hover {
+					animation: fadeIn 0.7s forwards, hoverUp 0.2s forwards;
+					animation-duration: 0s, 0.5s;
+					transition: color 0.5s linear;
+				}
+			}
+		}
+	}
+}

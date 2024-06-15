@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+/* resets */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+img {
+	display: block;
+}
+
+button {
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+/* Prevent font size inflation */
+
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	scrollbar-width: thin;
+	scrollbar-color: var(--body-bg-color) var(--text-color);
+	scroll-behavior: smooth;
+}
+
+:root {
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background-color: var(--body-bg-color);
+	color: var(--body-color);
+	overflow-x: hidden;
+}

@@ -1,0 +1,197 @@
+.projects {
+	padding-top: 4.8125rem;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10rem;
+
+		h2 {
+			margin-bottom: -9rem;
+		}
+
+		article {
+			width: 100%;
+			display: flex;
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -4rem;
+				left: -2rem;
+				z-index: -1;
+				width: calc(100vw);
+				height: calc(100% + 8rem);
+				border-radius: 5px;
+				background-color: var(--text-color);
+				opacity: 0.1;
+				transform: skewX(20deg);
+			}
+
+			.content,
+			.image {
+				width: 50%;
+				padding: 0 2rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.content {
+				flex-direction: column;
+				h3 {
+					text-align: center;
+				}
+
+				p {
+					margin: 2rem 0 3rem;
+					text-align: justify;
+				}
+
+				.tecnologies {
+					display: flex;
+					justify-content: center;
+					gap: 1rem;
+					position: relative;
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: -1.5rem;
+						left: -3rem;
+						z-index: -1;
+						width: calc(100% + 6rem);
+						height: calc(100% + 3rem);
+						border-radius: 5px;
+						background-color: var(--text-color);
+						opacity: 0.6;
+						transform: skewX(20deg);
+					}
+
+					#React {
+						color: #00d5f1;
+					}
+					#Vite {
+						color: #c947fc;
+					}
+					#Sass {
+						color: #e92ca0;
+					}
+					#Supabase {
+						color: #1db676;
+					}
+					#HTML {
+						color: #b2be00;
+					}
+					#CSS {
+						color: #2559e9;
+					}
+					#Nivo {
+						color: #d4ad00;
+					}
+					#MaterialUI {
+						color: #87ccfa;
+					}
+
+					@media (prefers-color-scheme: dark) {
+						#React {
+							color: darken(#00d5f1, 20);
+						}
+						#Vite {
+							color: #a400e6;
+						}
+						#Sass {
+							color: #9e0061;
+						}
+						#Supabase {
+							color: #0a6942;
+						}
+						#HTML {
+							color: #b2be00;
+						}
+						#CSS {
+							color: #2559e9;
+						}
+						#Nivo {
+							color: #684300;
+						}
+						#MaterialUI {
+							color: #006ab1;
+						}
+					}
+				}
+			}
+
+			.image {
+				position: relative;
+				a {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					padding: 5px 15px;
+					border-radius: 5px;
+					border: 2px solid var(--text-color);
+					color: var(--text-color);
+					background-color: var(--body-bg-color);
+					font-size: 1rem;
+					opacity: 0;
+					transition: all 0.1s linear;
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 500px;
+					height: 100%;
+					background-color: var(--body-bg-color);
+					opacity: 0;
+					transition: all 0.2s linear;
+				}
+				&:hover {
+					a {
+						opacity: 1;
+						&:hover {
+							background-color: var(--text-color);
+							color: var(--body-bg-color);
+						}
+					}
+					&::before {
+						opacity: 0.7;
+					}
+				}
+				img {
+					width: 500px;
+					height: 300px;
+					max-width: 100%;
+					max-height: 100%;
+					box-shadow: 0 0 15px 0 #000000;
+				}
+			}
+
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+				&::before {
+					left: auto;
+					right: -2rem;
+					transform: skewX(-20deg);
+				}
+
+				.tecnologies {
+					&::before {
+						transform: skewX(-20deg);
+					}
+				}
+			}
+		}
+	}
+}

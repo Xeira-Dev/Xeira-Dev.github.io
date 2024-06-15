@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as *;
+
+/* reusable css classes */
+
+.container {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.show {
+	opacity: 1;
+}

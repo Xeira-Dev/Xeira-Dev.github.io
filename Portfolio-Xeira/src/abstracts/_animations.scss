@@ -1,0 +1,98 @@
+@keyframes fadeinLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeinRight {
+	from {
+		opacity: 0;
+		transform: translateX(200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeinUp {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeoutUp {
+	from {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+}
+
+@keyframes hoverUp {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-3px);
+	}
+}
+
+@keyframes hoverDown {
+	from {
+		transform: translateY(-3px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes imageZoomCard {
+	0% {
+		width: 60px;
+		height: 60px;
+		padding: 10px 13px;
+	}
+	// 25% {}
+	// 50% {}
+	100% {
+		width: 325px;
+		height: 325px;
+		padding: 25px 30px;
+	}
+}
+
+@keyframes imageZoomFrame {
+	0% {
+		padding: 3px;
+		border-radius: 3px;
+	}
+	// 25% {}
+	// 50% {}
+	100% {
+		padding: 1rem;
+		border-radius: 10px;
+	}
+}
