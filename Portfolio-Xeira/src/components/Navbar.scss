@@ -32,7 +32,7 @@ header {
 					cursor: pointer;
 					color: var(--text-color);
 					text-shadow: 0 0 10px var(--black-color);
-					display: block;
+					display: inline-block;
 					transition: transform 0.2s;
 					@media (prefers-color-scheme: light) {
 						text-shadow: 0 0 10px rgb(248, 248, 255);
@@ -53,7 +53,7 @@ header {
 							width: 100%;
 						}
 						&:hover {
-							transform: translateY(0px);
+							transform: none;
 						}
 					}
 				}
