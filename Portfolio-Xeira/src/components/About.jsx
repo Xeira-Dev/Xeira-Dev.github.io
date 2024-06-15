@@ -54,31 +54,31 @@ const About = ({ setSection }) => {
 					<div className='timeline_images'>
 						<div className='card active'>
 							<div className='frame'>
-								<img title='ATEC' src='/timeline/Atec_Projeto_Final.png' alt='' />
+								<img loading='lazy' title='ATEC' src='/timeline/Atec_Projeto_Final.png' alt='' />
 								<span>2017</span>
 							</div>
 						</div>
 						<div className='card'>
 							<div className='frame'>
-								<img src='/timeline/TVI_Tester.png' alt='' />
+								<img loading='lazy' src='/timeline/TVI_Tester.png' alt='' />
 								<span>2020</span>
 							</div>
 						</div>
 						<div className='card'>
 							<div className='frame'>
-								<img src='/timeline/Securitas.jpg' alt='' />
+								<img loading='lazy' src='/timeline/Securitas.jpg' alt='' />
 								<span>2023</span>
 							</div>
 						</div>
 						<div className='card'>
 							<div className='frame'>
-								<img src='/timeline/Flag_Lisboa.jpg' alt='' />
+								<img loading='lazy' src='/timeline/Flag_Lisboa.jpg' alt='' />
 								<span>2024</span>
 							</div>
 						</div>
 						<div className='card'>
 							<div className='frame'>
-								<img src='/timeline/2024_Me.png' alt='' />
+								<img loading='lazy' src='/timeline/2024_Me.png' alt='' />
 								<span>NOW</span>
 							</div>
 						</div>

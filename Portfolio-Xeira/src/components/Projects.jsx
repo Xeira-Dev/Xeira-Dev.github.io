@@ -49,7 +49,7 @@ const Projects = ({ setSection }) => {
 									</div>
 								</div>
 								<div className='image'>
-									<img src={project.image} alt='' />
+									<img loading='lazy' src={project.image} alt='' />
 									<a target='_blank' href={project.link}>
 										Open
 									</a>
